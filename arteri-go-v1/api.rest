@@ -1,0 +1,81 @@
+@host = localhost:8080
+
+// Create Product
+POST http://{{host}}/api/records HTTP/1.1
+content-type: application/json
+    
+{
+    "title": "fuu-record",
+    "description": "fufufu-description",
+    "categoryId": 1
+}
+
+###
+
+// Get Product By ID
+GET http://{{host}}/api/records/2 HTTP/1.1
+content-type: application/json
+
+###
+
+// Get All records
+GET http://{{host}}/api/records/ HTTP/1.1
+content-type: application/json
+
+###
+
+// Update Product
+PUT http://{{host}}/api/records/2 HTTP/1.1
+content-type: application/json
+
+{
+  "id": 2,
+  "title": "secret-record-v2",
+  "description": "secret-description ver2",
+  "caregoryId": 2
+}
+
+###
+
+// Delete Product
+DELETE http://{{host}}/api/records/1 HTTP/1.1
+content-type: application/json
+
+###
+
+// Create Category
+POST http://{{host}}/api/categories HTTP/1.1
+content-type: application/json
+    
+{
+    "name": "legal-new"
+}
+
+###
+
+// Get Category By ID
+GET http://{{host}}/api/categories/3 HTTP/1.1
+content-type: application/json
+
+###
+
+// Get All categories
+GET http://{{host}}/api/categories/ HTTP/1.1
+content-type: application/json
+
+###
+
+// Update Category
+PUT http://{{host}}/api/categories/2 HTTP/1.1
+content-type: application/json
+
+{
+  "id": 2,
+  "name": "illegal"
+}
+
+###
+
+// Delete Category
+DELETE http://{{host}}/api/categories/2 HTTP/1.1
+content-type: application/json
